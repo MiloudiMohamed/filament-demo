@@ -105,8 +105,8 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                // Tables\Columns\SelectColumn::make('blog_category_id')
-                //     ->options(fn () => Category::pluck('id', 'name')),
+                Tables\Columns\SelectColumn::make('blog_category_id')
+                    ->options(fn () => Category::pluck('id', 'name')),
                 Tables\Columns\ImageColumn::make('image')
                     ->label('Image'),
 
